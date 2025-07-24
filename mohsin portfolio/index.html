@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header__container">
+      <div class="logo"><i class="ri-code-s-slash-line"></i> Mohsin</div>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon"><i class="ri-menu-3-line"></i></label>
+      <ul class="nav__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <h1>Hi, I'm <span>Muhammad Mohsin Akhlaq</span></h1>
+        <h2>Creative Web Developer</h2>
+        <p>I craft responsive and modern websites with user-friendly interfaces and stunning visuals. Let’s bring your ideas to life!</p>
+        <div class="hero__buttons">
+          <a href="#contact" class="btn primary">Hire Me</a>
+          <a href="#projects" class="btn secondary">View Work</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img src="assets/portfolio1.jpg.jpeg" alt="Profile Picture">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about">
+    <div class="container about__container">
+      <h2>About Me</h2>
+      <p>I am a full‑stack developer specializing in building and designing exceptional digital experiences. My interest lies in creating high‑quality, scalable, and maintainable web designs.</p>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="services">
+    <div class="container services__container">
+      <h2>What I Do</h2>
+      <div class="service__grid">
+        <div class="service__item"><i class="ri-html5-line"></i><h3>Frontend Development</h3><p>Building responsive UIs with HTML, CSS, and JavaScript.</p></div>
+        <div class="service__item"><i class="ri-smartphone-line"></i><h3>Responsive Design</h3><p>Ensuring your site looks great on any device.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="projects">
+    <div class="container projects__container">
+      <h2>My Projects</h2>
+      <div class="project__grid">
+        <div class="project__item"><a href="https://mohsin-car-rental.netlify.app/">Project 1</a></div>
+                <div class="project__item"><a href="https://modern-furni-shop.netlify.app/">Project 2</a></div>
+                        <div class="project__item"><a href="https://app.netlify.com/projects/mohsin-escapes/">Project 3</a></div>
+      </div>        
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="container contact__container">
+      <h2>Get In Touch</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Muhammad Mohsin Akhlaq" required>
+        <input type="email" id="email" placeholder="muhammadmohsin3107@gmail.com " required>
+        <textarea id="message" placeholder="I am a full‑stack developer specializing in building and designing exceptional digital experiences. My interest lies in creating high‑quality, scalable, and maintainable web applications." required></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <p> Muhammad Mohsin Akhlaq.</p>
+      <div class="socials">
+        <a href="https://web.facebook.com/profile.php?id=61578267727987"><i class="ri-facebook-fill"></i></a>
+        <a href="https://github.com/MuhammadMohsin107"><i class="ri-github-fill"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-mohsin-9248162ba/"><i class="ri-linkedin-fill"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('.nav__links a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Form handler
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`Thank you, ${name}! Your message has been sent.`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
