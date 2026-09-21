@@ -93,21 +93,46 @@ export default function FooterContact() {
               </span>
             </div>
 
-            <div className="flex flex-wrap gap-x-8 gap-y-4">
-              {SOCIAL_LINKS.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative group text-sm md:text-lg font-medium text-[#0A0A0A] transition-all duration-300"
-                >
-                  <span className="group-hover:italic group-hover:opacity-50 transition-all duration-300">
-                    {link.name}
-                  </span>
-                  <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-[#0A0A0A] transition-all duration-500 ease-out group-hover:w-full" />
-                </a>
-              ))}
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-3">
+                <span className="inline-block px-3 py-1 bg-zinc-200 text-zinc-600 text-[10px] md:text-xs uppercase tracking-widest font-bold self-start rounded-sm">
+                  Accepting select B2B consulting & founding engineering engagements
+                </span>
+                
+                <div className="flex flex-col sm:flex-row gap-4 mt-2">
+                  <a
+                    href="https://calendly.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-[#0A0A0A] text-[#F4F4F5] px-6 py-3 font-mono text-xs uppercase tracking-widest hover:bg-[#4F46E5] transition-colors duration-300"
+                  >
+                    Schedule Architectural Audit ↗
+                  </a>
+                  <a
+                    href="mailto:aliyannadeem10@gmail.com?subject=[Consulting]%20Architecture%20Inquiry"
+                    className="flex items-center justify-center gap-2 border border-[#0A0A0A] text-[#0A0A0A] px-6 py-3 font-mono text-xs uppercase tracking-widest hover:bg-zinc-200 transition-colors duration-300"
+                  >
+                    Direct Engineering Inquiry
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-x-8 gap-y-4 mt-4">
+                {SOCIAL_LINKS.map((link) => (
+                  <a
+                    key={link.id}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative group text-xs md:text-sm font-medium text-zinc-500 transition-all duration-300"
+                  >
+                    <span className="group-hover:italic group-hover:text-[#0A0A0A] transition-all duration-300">
+                      {link.name}
+                    </span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#0A0A0A] transition-all duration-500 ease-out group-hover:w-full" />
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div

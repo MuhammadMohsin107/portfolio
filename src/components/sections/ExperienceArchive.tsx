@@ -1,10 +1,6 @@
-"use client";
-
-import { useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 import { EB_Garamond } from "next/font/google";
+import ExperienceAnimationWrapper from "@/components/animations/ExperienceAnimationWrapper";
+import { experienceData } from "@/lib/experience-data";
 
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
@@ -12,78 +8,10 @@ const ebGaramond = EB_Garamond({
   weight: ["400", "500", "700", "800"],
 });
 
-gsap.registerPlugin(ScrollTrigger);
-
-const CARDS = [
-  {
-    id: 1,
-    year: "PRESENT",
-    role: "Solo Platform Architect",
-    company: "The University of Lahore",
-    desc: "Mission-critical offline-first platform. Zero-trust security, real-time sync, cryptographic access.",
-    tech: "GO / NATS / TEMPORAL",
-    theme: "dark",
-    bg: "bg-[#18181B]",
-    text: "text-[#F4F4F5]",
-    stroke: "#3f3f46",
-  },
-  {
-    id: 2,
-    year: "2024",
-    role: "Senior Frontend Lead",
-    company: "PaceDream Company",
-    desc: "Led senior frontend development. Managed 4 developers, delivering complex flight workflows and secure payments.",
-    tech: "NEXT.JS / TS / REDUX",
-    theme: "light",
-    bg: "bg-[#F4F4F5]",
-    text: "text-[#0A0A0A]",
-    stroke: "#D4D4D8",
-  },
-  {
-    id: 3,
-    year: "2023",
-    role: "AWS DevOps Intern",
-    company: "The DevOps Team",
-    desc: "Automated scalable infrastructure. Hands-on with heavy cloud deployments.",
-    tech: "AWS / TERRAFORM / K8S",
-    theme: "accent",
-    bg: "bg-[#4F46E5]",
-    text: "text-[#F4F4F5]",
-    stroke: "#818cf8",
-  },
-];
-
 export default function ExperienceArchive() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const cards = gsap.utils.toArray<HTMLElement>(".archive-card");
-
-      cards.forEach((card, index) => {
-        // Don't animate the last card pushing back
-        if (index === cards.length - 1) return;
-
-        gsap.to(card, {
-          scale: 0.9,
-          filter: "brightness(0.3)",
-          ease: "none",
-          scrollTrigger: {
-            trigger: card,
-            start: "top top",
-            end: () => `+=${window.innerHeight}`,
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
-        });
-      });
-    },
-    { scope: containerRef },
-  );
-
   return (
-    <section ref={containerRef} className="relative w-full bg-[#0A0A0A]">
-      {CARDS.map((card, i) => (
+    <ExperienceAnimationWrapper>
+      {experienceData.map((card, i) => (
         <div
           key={card.id}
           className={`archive-card sticky top-0 h-screen w-full flex flex-col justify-center px-6 md:px-24 will-change-transform origin-top overflow-hidden ${card.bg} ${card.text}`}
@@ -120,7 +48,7 @@ export default function ExperienceArchive() {
                 <p
                   className={`${ebGaramond.className} text-xl md:text-3xl font-medium leading-[1.2] max-w-xl opacity-90`}
                 >
-                  {card.desc}
+                  {card.description}
                 </p>
               </div>
 
@@ -134,6 +62,6 @@ export default function ExperienceArchive() {
           </div>
         </div>
       ))}
-    </section>
+    </ExperienceAnimationWrapper>
   );
 }
