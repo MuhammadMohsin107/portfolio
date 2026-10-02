@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aliyan | Portfolio",
-  description: "Portfolio of M. Aliyan Nadeem",
+  title: "Mohsin| Portfolio",
+  description: "Portfolio of M. Mohsin Akhlaq",
 };
 
 export default function RootLayout({

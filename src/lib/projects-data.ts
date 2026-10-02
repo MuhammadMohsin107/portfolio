@@ -22,23 +22,23 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    id: "quanta",
-    title: "Quanta – AI Browser Execution Engine",
+    id: "Portal Hub",
+    title: "Portal Hub – AI-Powered Job bot ",
     role: "Founder / Principal Software Engineer",
-    category: "AI Infrastructure & Distributed Systems",
+    category: "AI Infrastructure & Distributed job execution",
     timeline: "Dec 2024 – Present",
     year: "2024",
     image: "/projects/zero_trust_platform_mockup.png",
     tech: "Go / Temporal",
-    summary: "An AI-powered web automation platform built to execute complex, authenticated browser workflows securely. Bypasses expensive multimodal vision models in favor of a fast, deterministic DOM-first extraction engine.",
+    summary: "An AI-powered web job platform built to execute complex, real time  jobs.",
     metrics: [
       "Sustained 10 concurrent Playwright contexts within a strict 2GB container budget",
       "Enforced hard caps of 40,000-token execution limits to prevent runaway LLM loop costs",
-      "Bypassed WAFs successfully using AES-256-GCM encrypted browser-session storage"
+      "Bypassed WAFs successfully using AES-256-GCM encrypted  job browser-session "
     ],
     architecture: "The system is strictly decoupled into a Go-based Control Plane (handling REST, JWT validation, and atomic billing) and a Python Execution Plane. Communication is orchestrated via gRPC and Temporal workflows. Live execution telemetry is buffered in memory via NATS JetStream and piped to the frontend via Server-Sent Events (SSE) to ensure the Python worker is never blocked.",
     stack: {
-      languages: "Go, Python, TypeScript",
+      languages: " Python, TypeScript",
       orchestration: "Temporal, NATS JetStream, Docker",
       database: "PostgreSQL, Redis, Qdrant, MinIO",
       frontend: "Next.js, Playwright"
@@ -49,15 +49,15 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: "classycrave",
-    title: "ClassyCrave – B2B Operations & POS Platform",
+    id: "Scorelo AI",
+    title: "Scorelo AI – Shopify Store Enhancing Platform",
     role: "Lead Software Architect",
-    category: "B2B SaaS & Business Automation",
+    category: "Scorelo AI Business Automation",
     timeline: "2026",
     year: "2026",
     image: "/projects/pacedream_booking_mockup.png",
     tech: "TypeScript / PostgreSQL",
-    summary: "A comprehensive Point-of-Sale (POS) and operations platform for the restaurant industry, featuring a custom conversational ordering pipeline, live kitchen synchronization, and strict transactional data integrity.",
+    summary: "A comprehensive Point-of-Sale (POS) and operations platform for the Shopify Stores industry, featuring a custom conversational ordering pipeline, live kitchen synchronization, and strict transactional data integrity.",
     metrics: [
       "Eliminated long-lived connection overhead via smart dynamic polling (15s active / 60s idle)",
       "Zero invalid payload submissions achieved via deeply nested Zod schema validation",
@@ -76,8 +76,8 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    id: "crucible-ai",
-    title: "CrucibleAI – Distributed Multi-Agent Platform",
+    id: "Nexus-IO",
+    title: "Nexus-IO –  DataScraping Platform",
     role: "Systems Architect",
     category: "AI Infrastructure",
     timeline: "2026",

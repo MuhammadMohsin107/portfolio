@@ -17,7 +17,7 @@ export interface Experience {
 export const experienceData: Experience[] = [
   {
     id: "tech-consultancy",
-    role: "Founder & Lead Software Engineer",
+    role: "Founder & Jr. Software Engineer",
     company: "Independent Tech Consultancy",
     timeline: "Jan 2026 – Present",
     year: "PRESENT",
@@ -25,7 +25,7 @@ export const experienceData: Experience[] = [
     bg: "bg-[#18181B]",
     text: "text-[#F4F4F5]",
     stroke: "#3f3f46",
-    description: "Founding and operating a solo software agency dedicated to helping traditional B2B businesses modernize by replacing manual, paper-based management with custom digital infrastructure and highly available web systems.",
+    description: "Founding and working with a  software agency  dedicated to helping traditional B2B businesses modernize by replacing manual, paper-based management with custom digital infrastructure and highly available web systems.",
     achievements: [
       "Partner directly with business owners to architect bespoke software solutions, including Point-of-Sale (POS) systems and headless e-commerce storefronts.",
       "Design and deploy comprehensive internal systems with secure admin panels, multi-stakeholder portals, and strict Role-Based Access Control (RBAC).",
@@ -35,7 +35,7 @@ export const experienceData: Experience[] = [
   },
   {
     id: "quanta",
-    role: "Founder / Principal Software Engineer",
+    role: "Principal Software Engineer",
     company: "Quanta (Startup)",
     timeline: "Dec 2024 – Present",
     year: "2024",
@@ -53,7 +53,7 @@ export const experienceData: Experience[] = [
   },
   {
     id: "uol",
-    role: "Lead System Architect & Programming Head",
+    role: "Sub-Programming Head",
     company: "The University of Lahore",
     timeline: "Sep 2025 – Jun 2026",
     year: "2026",

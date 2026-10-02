@@ -15,16 +15,16 @@ const ebGaramond = EB_Garamond({
 gsap.registerPlugin(ScrollTrigger);
 
 const SOCIAL_LINKS = [
-  { name: "Email", href: "mailto:aliyannadeem10@gmail.com", id: "email" },
+  { name: "Email", href: "mailto:mohsin12345akhlaaq@gmail.com", id: "email" },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/muhammad-aliyan-1900a7275/",
+    href: "https://www.linkedin.com/in/muhammadmohsinakhlaq/",
     id: "li",
   },
-  { name: "GitHub", href: "https://github.com/MuhammadAliyan10", id: "gh" },
+  { name: "GitHub", href: "https://github.com/MuhammadMohsin107", id: "gh" },
   {
     name: "Resume",
-    href: "https://www.canva.com/design/DAGQ9_HkS7U/c1nS5v7YF2Bq4f4eS7Bq4Q/view",
+    href: "https://canva.link/xaqn6dba0drzuq0",
     id: "cv",
   },
 ];
@@ -86,7 +86,7 @@ export default function FooterContact() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-end">
             <div className="flex flex-col gap-2">
               <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-[#0A0A0A]">
-                Muhammad Aliyan Nadeem
+                Muhammad Mohsin Akhlaq
               </span>
               <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-zinc-400">
                 Software Engineer & Architect
@@ -109,7 +109,7 @@ export default function FooterContact() {
                     Schedule Architectural Audit ↗
                   </a>
                   <a
-                    href="mailto:aliyannadeem10@gmail.com?subject=[Consulting]%20Architecture%20Inquiry"
+                    href="mailto:mohsin12345akhlaaq@gmail.com?subject=[Consulting]%20Architecture%20Inquiry"
                     className="flex items-center justify-center gap-2 border border-[#0A0A0A] text-[#0A0A0A] px-6 py-3 font-mono text-xs uppercase tracking-widest hover:bg-zinc-200 transition-colors duration-300"
                   >
                     Direct Engineering Inquiry
